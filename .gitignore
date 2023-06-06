@@ -1,0 +1,5 @@
+sofar_manipulator_simulator/launch/*
+sofar_manipulator_simulator/sofar_manipulator_simulator/__pycache__
+sofar_manipulator_simulator/sofar_manipulator_simulator/controller_node.py
+sofar_manipulator_simulator/sofar_manipulator_simulator/robot_logic.py
+sofar_manipulator_simulator_interface/srv/*
