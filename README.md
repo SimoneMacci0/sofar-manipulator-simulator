@@ -54,4 +54,4 @@ Good luck ;)
 
 ## Expected Output
 
-![GIF]([https://github.com/SimoneMacci0/sofar_manipulator_simulator/blob/main/sofar_manipulator_simulator/resource/output-final.gif](https://github.com/SimoneMacci0/sofar-manipulator-simulator/blob/main/sofar_manipulator_simulator/resource/output-final.gif))
+![GIF](https://github.com/SimoneMacci0/sofar-manipulator-simulator/blob/main/sofar_manipulator_simulator/resource/output-final.gif)
