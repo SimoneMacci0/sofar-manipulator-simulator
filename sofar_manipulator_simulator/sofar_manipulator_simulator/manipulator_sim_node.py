@@ -5,7 +5,7 @@ from rclpy.node import Node
 from std_msgs.msg import Float64, Int64
 from sensor_msgs.msg import JointState
 
-#from sofar_manipulator_simulator_interface.srv import IKService, LocService
+from sofar_manipulator_simulator_interface.srv import IKService, LocService
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -29,10 +29,10 @@ class ManipulatorSimNode(Node):
         self.create_subscription(Int64, "/robot/gripper_cmd", self.on_gripper_cmd, 10)
 
         # Service for computing inverse kinematics
-        #self.create_service(IKService, "/robot/ik", self.compute_ik)
+        self.create_service(IKService, "/robot/ik", self.compute_ik)
 
         # Service for retrieving coordinates of ball/target
-        #self.create_service(LocService, "/objects/location", self.get_object_location)
+        self.create_service(LocService, "/objects/location", self.get_object_location)
 
 
     # Callback invoked whenever desired joint configuration is received
@@ -50,7 +50,6 @@ class ManipulatorSimNode(Node):
         elif msg.data == -1:
             self.sim.drop()
 
-    '''
     # Callback to compute ik 
     def compute_ik(self, request: IKService.Request, response: IKService.Response):
         # Get desired end-effector pose from request
@@ -90,7 +89,6 @@ class ManipulatorSimNode(Node):
             response.location.y = self.sim.targets[color_idx].center_y - self.sim.origin[1]
             response.location.z = 0.0
         return response
-    '''
 
   
 def main(args=None):

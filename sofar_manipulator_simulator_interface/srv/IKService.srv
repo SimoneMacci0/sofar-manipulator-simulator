@@ -1,0 +1,4 @@
+geometry_msgs/Pose2D desired_ee_pose
+---
+std_msgs/Bool feasible
+std_msgs/Float64[] desired_angles

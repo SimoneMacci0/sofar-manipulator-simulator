@@ -1,0 +1,4 @@
+std_msgs/String color
+std_msgs/String item
+---
+geometry_msgs/Point location
